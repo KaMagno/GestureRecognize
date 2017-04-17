@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<device id="retina4_7" orientation="portrait">
+<adaptation id="fullscreen"/>
+</device>
+<dependencies>
+<deployment identifier="iOS"/>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<!--View Controller-->
+<scene sceneID="tne-QT-ifu">
+<objects>
+<viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+<viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="monkey" translatesAutoresizingMaskIntoConstraints="NO" id="sXN-Ci-FnC">
+<rect key="frame" x="123" y="60" width="128" height="128"/>
+<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<gestureRecognizers/>
+<connections>
+<outletCollection property="gestureRecognizers" destination="DL8-Ol-YJr" appends="YES" id="Jh5-DO-NbC"/>
+<outletCollection property="gestureRecognizers" destination="Jfd-Ov-52d" appends="YES" id="eOA-W4-WR4"/>
+<outletCollection property="gestureRecognizers" destination="ojo-5g-ymD" appends="YES" id="MIc-pw-f5X"/>
+</connections>
+</imageView>
+<imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="syD-T0-zWF">
+<rect key="frame" x="123" y="479" width="128" height="128"/>
+<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<gestureRecognizers/>
+<connections>
+<outletCollection property="gestureRecognizers" destination="Obq-be-CAA" appends="YES" id="jlh-53-UHe"/>
+<outletCollection property="gestureRecognizers" destination="48i-BS-AOT" appends="YES" id="XiO-Md-4LC"/>
+<outletCollection property="gestureRecognizers" destination="vPI-uP-2V6" appends="YES" id="Kwo-yS-2sy"/>
+</connections>
+</imageView>
+</subviews>
+<color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<gestureRecognizers/>
+</view>
+<connections>
+<outlet property="outletBananaPan" destination="Obq-be-CAA" id="9g7-j1-aPf"/>
+<outlet property="outletMonkeyPan" destination="DL8-Ol-YJr" id="6sL-AH-VKu"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+<panGestureRecognizer minimumNumberOfTouches="1" id="DL8-Ol-YJr" userLabel="Monkey Pan Gesture Recognizer">
+<connections>
+<action selector="handlePanWithRecognizer:" destination="BYZ-38-t0r" id="aGe-AC-RKn"/>
+<outlet property="delegate" destination="BYZ-38-t0r" id="ewJ-FC-e2f"/>
+</connections>
+</panGestureRecognizer>
+<panGestureRecognizer minimumNumberOfTouches="1" id="Obq-be-CAA" userLabel="Banana Pan Gesture Recognizer">
+<connections>
+<action selector="handlePanWithRecognizer:" destination="BYZ-38-t0r" id="4YK-VR-7uc"/>
+<outlet property="delegate" destination="BYZ-38-t0r" id="hdy-Rh-tCt"/>
+</connections>
+</panGestureRecognizer>
+<pinchGestureRecognizer id="Jfd-Ov-52d" userLabel="Monkey Pinch Gesture Recognizer">
+<connections>
+<action selector="handlePinchWithRecognizer:" destination="BYZ-38-t0r" id="ORH-3B-P0a"/>
+<outlet property="delegate" destination="BYZ-38-t0r" id="hGP-nL-goY"/>
+</connections>
+</pinchGestureRecognizer>
+<pinchGestureRecognizer id="48i-BS-AOT" userLabel="Banana Pinch Gesture Recognizer">
+<connections>
+<action selector="handlePinchWithRecognizer:" destination="BYZ-38-t0r" id="m2o-rO-90b"/>
+<outlet property="delegate" destination="BYZ-38-t0r" id="bQT-KM-26i"/>
+</connections>
+</pinchGestureRecognizer>
+<rotationGestureRecognizer id="ojo-5g-ymD" userLabel="Monkey Rotation Gesture Recognizer">
+<connections>
+<action selector="handleRotateWithRecognizer:" destination="BYZ-38-t0r" id="nQ3-tg-bRv"/>
+<outlet property="delegate" destination="BYZ-38-t0r" id="bdo-oS-M4E"/>
+</connections>
+</rotationGestureRecognizer>
+<rotationGestureRecognizer id="vPI-uP-2V6" userLabel="Banana Rotation Gesture Recognizer">
+<connections>
+<action selector="handleRotateWithRecognizer:" destination="BYZ-38-t0r" id="Br6-1P-weh"/>
+<outlet property="delegate" destination="BYZ-38-t0r" id="Awr-VO-pEE"/>
+</connections>
+</rotationGestureRecognizer>
+</objects>
+</scene>
+</scenes>
+<resources>
+<image name="banana" width="175" height="175"/>
+<image name="monkey" width="168" height="168"/>
+</resources>
+</document>
+
